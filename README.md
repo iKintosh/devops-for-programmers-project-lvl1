@@ -27,3 +27,9 @@ docker pull ikintosh/devops-for-programmers-project-lvl1:latest
 
 `pull`:
 > pull `latest` version from docker hub
+
+### How to ...
+
+#### change DB configuration?
+1. Create `app/.env` file and add specify following parameters: `DATABASE_PORT`, `DATABASE_HOST`, `DATABASE_NAME`, `DATABASE_USERNAME`, `DATABASE_PASSWORD`. Please note, that in order for this to work you need to have DB with parameters specified above.
+2. (Optional) Change DB configuration in `docker-compose.yml` if necessary.
