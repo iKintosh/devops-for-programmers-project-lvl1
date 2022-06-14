@@ -5,7 +5,7 @@ services:
       - ./app:/app
     ports: 
     - 8080:8080
-    command: npm start
+    command: bash -c 'make prepare-env && npm start'
   caddy:
     image: caddy:2.5.1
     restart: unless-stopped
