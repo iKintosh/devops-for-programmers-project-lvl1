@@ -8,8 +8,6 @@ RUN npm ci
 
 COPY app/. .
 
-RUN make prepare-env
-
 EXPOSE 8080
 
 CMD npm start

@@ -1,8 +1,11 @@
+prepare-env:
+	cp -n ./app/.env.example ./app/.env
+
 ci:
-	docker-compose -f docker-compose.yml --env-file ./app/.env up --abort-on-container-exit --exit-code-from app 
+	make prepare-env; docker-compose -f docker-compose.yml --env-file ./app/.env up --abort-on-container-exit --exit-code-from app
 
 start:
-	docker-compose --env-file ./app/.env up 
+	make prepare-env; docker-compose --env-file ./app/.env up 
 
 push:
 	docker push ikintosh/devops-for-programmers-project-lvl1:latest
